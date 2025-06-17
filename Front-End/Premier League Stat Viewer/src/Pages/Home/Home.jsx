@@ -4,13 +4,26 @@ import './Home.css';
 
 function Home() {
     return(
-        <div>
+        <div className='min-h-screen bg=gradient-to-b from-purple-50
+        to-white'>
             <Navbar className="nav"/>
-            <div className='textarea'>
-                <img src={premier_league_logo} alt="premier_league_logo" className='logo'/>
-                <h1>Welcome to the Premier League Stat Viewer</h1>
-                <p>Allowing you to look up all stats of your favourite players!</p>
-                <button className='btn'>Get Started</button>
+            <div className='flex flex-col items-center justify-center
+            text-center px-4 py-20 space-y-8'>
+                <img 
+                    src={premier_league_logo} 
+                    alt="premier_league_logo" 
+                    className='w-60 md:w-80 drop-shadow-lg'
+                />
+                <h1 className='text-3xl md:text-5xl font-bold text-purple-900'>
+                    Welcome to the Premier League Stat Viewer
+                </h1>
+                <p className='text-gray-600 max-w-xl'>
+                    Easily look up stats for all your favourite players in the Premier League.
+                </p>
+                <button className='px-8 py-3 lightShadow cursor-pointer rounded-full 
+                bg-purple-700 text-white hover:bg-purple-800 shadow-lg transition
+                duration-300'>
+                    Get Started</button>
             </div>
         </div>
     );
