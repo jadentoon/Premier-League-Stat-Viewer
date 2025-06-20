@@ -61,8 +61,9 @@ if not players_table:
 df = pd.read_html(StringIO(players_table))[0]
 #Removes the top row of the table as it contains unnamed column names which are unneeded.
 df.columns = df.columns.get_level_values(1)
-#Removes the 'Rk' column as it is unneeded as all players have indexs anyways.
+#Removes the 'Rk' and 'Matches' column as it is unneeded as all players have indexs anyways.
 df = df.drop('Rk', axis=1)
+df = df.drop('Matches', axis=1)
 #Removes any rows where the first column's value equals the column name,
 #cleaning any unnecessary rows and resets the index.
 df = df[df[df.columns[0]] != df.columns[0]].reset_index(drop=True)
