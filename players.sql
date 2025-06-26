@@ -1,8 +1,11 @@
+--WARNING - This will drop the Schema - Check before Running.
 DROP SCHEMA IF EXISTS premier_league_players CASCADE;
+CREATE SCHEMA premier_league_players;
 
+--Sets the search path to the schema just created so the table will be created inside that schema.
 SET search_path TO premier_league_players;
 
-CREATE SCHEMA premier_league_players;
+--Creates the table.
 CREATE TABLE players (
 id SERIAL PRIMARY KEY,
 player TEXT NOT NULL,
@@ -42,5 +45,9 @@ npg_expected_goals_per_90 REAL NOT NULL,
 npxg_xag_per_90 REAL NOT NULL
 );
 
+--Sets encoding to UTF8 so all characters within the players.csv file can be read properly without
+--giving an error, for example the 'Á' in Edson Álvarez
 SET client_encoding TO 'UTF8';
+
+--Copys the players from the csv into the table.
 \COPY players FROM 'players.csv' DELIMITER ',' CSV HEADER;
