@@ -32,17 +32,7 @@ assisted_xg REAL NOT NULL,
 npxg_xag REAL NOT NULL,
 progressive_carries REAL NOT NULL,
 progressive_passes REAL NOT NULL,
-progressive_passes_rec REAL NOT NULL,
-goals_per_90 REAL NOT NULL,
-assists_per_90 REAL NOT NULL,
-g_a_per_90 REAL NOT NULL,
-non_penalty_goals_per_90 REAL NOT NULL,
-g_a_per_90_non_pen REAL NOT NULL,
-expected_goals_per_90 REAL NOT NULL,
-expected_assisted_goals_per_90 REAL NOT NULL,
-xg_xag_per_90 REAL NOT NULL,
-npg_expected_goals_per_90 REAL NOT NULL,
-npxg_xag_per_90 REAL NOT NULL
+progressive_passes_rec REAL NOT NULL
 );
 
 --Sets encoding to UTF8 so all characters within the players.csv file can be read properly without
