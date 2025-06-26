@@ -71,6 +71,8 @@ df = df[df[df.columns[0]] != df.columns[0]].reset_index(drop=True)
 #for example, eng ENG would just ENG.
 df.iloc[:, 1] = df.iloc[:, 1].astype(str).apply(lambda x: re.sub(r'[^A-Z]', '', x))
 
+df = df.iloc[:, :25]
+
 #Saves the data frame to a csv file to be used for the Spring Boot part of the application.
 df.to_csv('players.csv')
 #Confirmation Message.
