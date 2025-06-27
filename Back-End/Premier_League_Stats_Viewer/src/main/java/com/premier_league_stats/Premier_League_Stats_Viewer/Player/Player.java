@@ -273,6 +273,38 @@ public class Player {
     public void setProgressive_passes_rec(Double progressive_passes_rec) {
         this.progressive_passes_rec = progressive_passes_rec;
     }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "id=" + id +
+                ", player='" + player + '\'' +
+                ", nation='" + nation + '\'' +
+                ", pos='" + pos + '\'' +
+                ", squad='" + squad + '\'' +
+                ", age=" + age +
+                ", born=" + born +
+                ", matches_played=" + matches_played +
+                ", starts=" + starts +
+                ", min=" + min +
+                ", nineties_played=" + nineties_played +
+                ", goals=" + goals +
+                ", assists=" + assists +
+                ", goals_and_assists=" + goals_and_assists +
+                ", non_penalty_goals=" + non_penalty_goals +
+                ", penalty_goals=" + penalty_goals +
+                ", penalty_kicks_attempted=" + penalty_kicks_attempted +
+                ", yellow_cards=" + yellow_cards +
+                ", red_cards=" + red_cards +
+                ", expected_goals=" + expected_goals +
+                ", non_penalty_xg=" + non_penalty_xg +
+                ", assisted_xg=" + assisted_xg +
+                ", npxg_xag=" + npxg_xag +
+                ", progressive_carries=" + progressive_carries +
+                ", progressive_passes=" + progressive_passes +
+                ", progressive_passes_rec=" + progressive_passes_rec +
+                '}';
+    }
 }
 
 
