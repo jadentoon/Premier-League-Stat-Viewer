@@ -56,6 +56,13 @@ public class PlayerService {
                 .collect(Collectors.toList());
     }
 
+    public List<Player> getPlayersByGoals(Integer goals){
+        return playerRepository.findAll()
+                .stream()
+                .filter(player -> player.getGoals() >= goals)
+                .collect(Collectors.toList());
+    }
+
     public Player addPlayer(Player player){
         playerRepository.save(player);
         return player;

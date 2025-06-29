@@ -22,7 +22,8 @@ public class PlayerController {
             @RequestParam(required = false) String squad,
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String nation,
-            @RequestParam(required = false) String pos
+            @RequestParam(required = false) String pos,
+            @RequestParam(required = false) Integer goals
             ){
         if (squad != null && pos != null){
             return playerService.getPlayersByPositionAndSquad(squad, pos);
@@ -34,6 +35,8 @@ public class PlayerController {
             return playerService.getPlayersByPlayerNation(nation);
         } else if (pos != null){
             return playerService.getPlayersByPosition(pos);
+        } else if (goals != null){
+            return playerService.getPlayersByGoals(goals);
         }
         return playerService.getPlayers();
     }
