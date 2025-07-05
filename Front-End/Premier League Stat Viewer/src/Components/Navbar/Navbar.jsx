@@ -1,14 +1,31 @@
-import {HiMenuAlt3, HiOutlineX} from "react-icons/hi";
+import { useState } from "react";
+import {HiMenuAlt3, HiOutlineX, HiOutlineUserGroup, HiOutlineHome, HiOutlineClipboardList , HiOutlineSearch, HiOutlineFlag} from "react-icons/hi";
 
 function Navbar({nav, handleNav}){
+
+    const navItems = [
+        {label: "Home", icon: <HiOutlineHome size="25"/>},
+        {label: "Clubs", icon: <HiOutlineUserGroup size="25"/>},
+        {label: "Nationalities", icon: <HiOutlineFlag size="25"/>},
+        {label: "Position", icon: <HiOutlineClipboardList  size="25"/>},
+        {label: "Search", icon: <HiOutlineSearch size="25"/>},
+    ]
+
+    const [hover, setHover] = useState(null);
+
     return(
         <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-[50px] bg-purple-300 drop-shadow-lg z-50'>
-            <ul className='hidden md:flex'>
-                <li className='p-4'>Home</li>
-                <li className='p-4'>Clubs</li>
-                <li className='p-4'>Nationalities</li>
-                <li className='p-4'>Position</li>
-                <li className='p-4'>Search</li>
+            <ul className='hidden md:flex gap-x-10'>
+                {navItems.map((item, index) => (
+                    <li
+                    key={item.label}
+                    className="p-4 cursor-pointer text-md"
+                    onMouseEnter={() => setHover(index)}
+                    onMouseLeave={() => setHover(null)}
+                    >
+                        {hover === index ? item.label :item.icon}
+                    </li>
+                ))}
             </ul>
 
             <div onClick={handleNav} className='block md:hidden cursor-pointer px-[100%]'>
