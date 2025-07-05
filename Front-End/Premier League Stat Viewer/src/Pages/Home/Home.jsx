@@ -7,17 +7,10 @@ function Home() {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
     return(
-        <div className='min-h-screen bg=gradient-to-b from-purple-50
+        <div className=' relative min-h-screen bg=gradient-to-b from-purple-50
         to-white' >
-            <Navbar  nav={nav} handleNav={handleNav}/>
-            {nav && (
-                <div
-                    onClick={handleNav}
-                    className="fixed inset-0 bg-black/50 z-40"
-                ></div>
-            )}
-            <div className='flex flex-col items-center justify-center
-            text-center px-4 py-20 space-y-8'>
+            <Navbar nav={nav} handleNav={handleNav}/>
+            <div className={`${(nav) ?'bg-black/50  inset-0' : ''} relative z-0 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 space-y-8`}>
                 <img 
                     src={premier_league_logo} 
                     alt="premier_league_logo" 
