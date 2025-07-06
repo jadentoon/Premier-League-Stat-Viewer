@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import premier_league_logo from '../../Assets/premier-league-logo.png';
 import Navbar from '../../Components/Navbar/Navbar';
-import './Home.css';
 
 function Home() {
     const [nav, setNav] = useState(false)

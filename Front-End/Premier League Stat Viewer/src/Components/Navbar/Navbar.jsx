@@ -1,14 +1,15 @@
 import { useState } from "react";
 import {HiMenuAlt3, HiOutlineX, HiOutlineUserGroup, HiOutlineHome, HiOutlineClipboardList , HiOutlineSearch, HiOutlineFlag} from "react-icons/hi";
+import { Link } from "react-router";
 
 function Navbar({nav, handleNav}){
 
     const navItems = [
-        {label: "Home", icon: <HiOutlineHome size="25"/>},
-        {label: "Clubs", icon: <HiOutlineUserGroup size="25"/>},
-        {label: "Nationalities", icon: <HiOutlineFlag size="25"/>},
-        {label: "Position", icon: <HiOutlineClipboardList  size="25"/>},
-        {label: "Search", icon: <HiOutlineSearch size="25"/>},
+        {label: "Home", icon: <HiOutlineHome size="25"/>, route: "/"},
+        {label: "Clubs", icon: <HiOutlineUserGroup size="25"/>, route: "/clubs"},
+        {label: "Nationalities", icon: <HiOutlineFlag size="25"/>, route: "/"},
+        {label: "Position", icon: <HiOutlineClipboardList  size="25"/>, route: "/"},
+        {label: "Search", icon: <HiOutlineSearch size="25"/>, route: "/"},
     ]
 
     const [hover, setHover] = useState(null);
@@ -23,7 +24,9 @@ function Navbar({nav, handleNav}){
                     onMouseEnter={() => setHover(index)}
                     onMouseLeave={() => setHover(null)}
                     >
-                        {hover === index ? item.label :item.icon}
+                        <Link to={item.route}>
+                            {hover === index ? item.label :item.icon}
+                        </Link>
                     </li>
                 ))}
             </ul>
