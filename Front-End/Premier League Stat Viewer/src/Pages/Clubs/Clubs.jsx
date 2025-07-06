@@ -1,8 +1,9 @@
+import Navbar from '../../Components/Navbar/Navbar';
 
 function Clubs(){
     return (
         <div>
-            <h1>CLUBS</h1>
+            <Navbar/>
         </div>
     )
 }

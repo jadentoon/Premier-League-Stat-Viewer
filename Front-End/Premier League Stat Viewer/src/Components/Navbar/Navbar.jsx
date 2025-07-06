@@ -30,17 +30,20 @@ function Navbar({nav, handleNav}){
                     </li>
                 ))}
             </ul>
-
             <div onClick={handleNav} className='block md:hidden cursor-pointer px-[100%]'>
                 {nav ? <HiOutlineX size={20}/> : <HiMenuAlt3 size={20}/>}
             </div>
             <div className={nav ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-purple-900 bg-purple-950 ease-in-out duration-500 z-50' : 'fixed left-[-100%]'}>
                 <ul className='uppercase p-4 bg-purple-300 border-r border-r-purple-900 opacity-100'>
-                    <li className='p-4 border-b border-gray-600'>Home</li>
-                    <li className='p-4 border-b border-gray-600'>Clubs</li>
-                    <li className='p-4 border-b border-gray-600'>Nationalities</li>
-                    <li className='p-4 border-b border-gray-600'>Position</li>
-                    <li className='p-4'>Search</li>
+                    {navItems.map((item, index) => (
+                        <li
+                        key={item.label}
+                        className={`p-4 border-b cursor-pointer ${index !== navItems.length - 1 ? 'border-gray-600' : 'border-transparent'}`}>
+                            <Link to={item.route}>
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
