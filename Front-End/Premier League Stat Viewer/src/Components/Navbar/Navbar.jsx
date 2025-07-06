@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {HiMenuAlt3, HiOutlineX, HiOutlineUserGroup, HiOutlineHome, HiOutlineClipboardList , HiOutlineSearch, HiOutlineFlag} from "react-icons/hi";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Navbar({nav, handleNav}){
 
