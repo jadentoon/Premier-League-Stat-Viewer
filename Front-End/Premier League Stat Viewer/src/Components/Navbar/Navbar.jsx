@@ -40,11 +40,11 @@ function Navbar(){
 
             {nav && (
                 <div
-                    className="fixed inset-0 bg-black/50 z-40"
+                    className="fixed inset-0 bg-black/50 z-40 md:hidden"
                 ></div>
             )}
 
-            <div className={nav ? 'fixed left-0 top-0 w-[40%] h-full bg-purple-300 border-r border-r-purple-900 ease-in-out duration-500 z-50' : 'fixed left-[-100%]'}>
+            <div className={nav ? 'fixed left-0 top-0 w-[40%] h-full bg-purple-300 border-r border-r-purple-900 ease-in-out duration-500 z-50 md:hidden' : 'fixed left-[-100%]'}>
                 <ul className='uppercase p-4 opacity-100 z-50'>
                     {navItems.map((item, index) => (
                         <li
