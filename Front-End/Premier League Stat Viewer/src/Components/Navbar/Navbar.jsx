@@ -7,7 +7,7 @@ function Navbar(){
     const navItems = [
         {label: "Home", icon: <HiOutlineHome size="25"/>, route: "/"},
         {label: "Clubs", icon: <HiOutlineUserGroup size="25"/>, route: "/clubs"},
-        {label: "Nationalities", icon: <HiOutlineFlag size="25"/>, route: "/"},
+        {label: "Nationalities", icon: <HiOutlineFlag size="25"/>, route: "/nationality"},
         {label: "Position", icon: <HiOutlineClipboardList  size="25"/>, route: "/"},
         {label: "Search", icon: <HiOutlineSearch size="25"/>, route: "/"},
     ]
