@@ -1,0 +1,327 @@
+[
+  {
+    "nationCode3": "ENG",
+    "nationCode2": "GB-ENG",
+    "nationName": "England"
+  },
+  {
+    "nationCode3": "USA",
+    "nationCode2": "US",
+    "nationName": "United States of America"
+  },
+  {
+    "nationCode3": "CIV",
+    "nationCode2": "CI",
+    "nationName": "Cote d'Ivoire"
+  },
+  {
+    "nationCode3": "NGA",
+    "nationCode2": "NG",
+    "nationName": "Nigeria"
+  },
+  {
+    "nationCode3": "ALG",
+    "nationCode2": "DZ",
+    "nationName": "Algeria"
+  },
+  {
+    "nationCode3": "NOR",
+    "nationCode2": "NO",
+    "nationName": "Norway"
+  },
+  {
+    "nationCode3": "SUI",
+    "nationCode2": "CH",
+    "nationName": "Switzerland"
+  },
+  {
+    "nationCode3": "NED",
+    "nationCode2": "NL",
+    "nationName": "Netherlands"
+  },
+  {
+    "nationCode3": "ARG",
+    "nationCode2": "AR",
+    "nationName": "Argentina"
+  },
+  {
+    "nationCode3": "BRA",
+    "nationCode2": "BR",
+    "nationName": "Brazil"
+  },
+  {
+    "nationCode3": "PAR",
+    "nationCode2": "PY",
+    "nationName": "Paraguay"
+  },
+  {
+    "nationCode3": "MEX",
+    "nationCode2": "MX",
+    "nationName": "Mexico"
+  },
+  {
+    "nationCode3": "FRA",
+    "nationCode2": "FR",
+    "nationName": "France"
+  },
+  {
+    "nationCode3": "DEN",
+    "nationCode2": "DK",
+    "nationName": "Denmark"
+  },
+  {
+    "nationCode3": "JAM",
+    "nationCode2": "JM",
+    "nationName": "Jamaica"
+  },
+  {
+    "nationCode3": "ESP",
+    "nationCode2": "ES",
+    "nationName": "Spain"
+  },
+  {
+    "nationCode3": "SWE",
+    "nationCode2": "SE",
+    "nationName": "Sweden"
+  },
+  {
+    "nationCode3": "GHA",
+    "nationCode2": "GH",
+    "nationName": "Ghana"
+  },
+  {
+    "nationCode3": "CMR",
+    "nationCode2": "CM",
+    "nationName": "Cameroon"
+  },
+  {
+    "nationCode3": "TUR",
+    "nationCode2": "TR",
+    "nationName": "Türkiye"
+  },
+  {
+    "nationCode3": "POL",
+    "nationCode2": "PL",
+    "nationName": "Poland"
+  },
+  {
+    "nationCode3": "GER",
+    "nationCode2": "DE",
+    "nationName": "Germany"
+  },
+  {
+    "nationCode3": "URU",
+    "nationCode2": "UY",
+    "nationName": "Uruguay"
+  },
+  {
+    "nationCode3": "GNB",
+    "nationCode2": "GW",
+    "nationName": "Guinea-Bissau"
+  },
+  {
+    "nationCode3": "MLI",
+    "nationCode2": "ML",
+    "nationName": "Mali"
+  },
+  {
+    "nationCode3": "NIR",
+    "nationCode2": "GB-NIR",
+    "nationName": "Northern Ireland"
+  },
+  {
+    "nationCode3": "CHI",
+    "nationCode2": "CL",
+    "nationName": "Chile"
+  },
+  {
+    "nationCode3": "WAL",
+    "nationCode2": "GB-WAL",
+    "nationName": "Wales"
+  },
+  {
+    "nationCode3": "ALB",
+    "nationCode2": "AL",
+    "nationName": "Albania"
+  },
+  {
+    "nationCode3": "AUS",
+    "nationCode2": "AU",
+    "nationName": "Australia"
+  },
+  {
+    "nationCode3": "ECU",
+    "nationCode2": "EC",
+    "nationName": "Ecuador"
+  },
+  {
+    "nationCode3": "SCO",
+    "nationCode2": "GB-SCO",
+    "nationName": "Scotland"
+  },
+  {
+    "nationCode3": "ITA",
+    "nationCode2": "IT",
+    "nationName": "Italy"
+  },
+  {
+    "nationCode3": "POR",
+    "nationCode2": "PT",
+    "nationName": "Portugal"
+  },
+  {
+    "nationCode3": "IRL",
+    "nationCode2": "IE",
+    "nationName": "Ireland"
+  },
+  {
+    "nationCode3": "BEL",
+    "nationCode2": "BE",
+    "nationName": "Belgium"
+  },
+  {
+    "nationCode3": "BAN",
+    "nationCode2": "BD",
+    "nationName": "Bangladesh"
+  },
+  {
+    "nationCode3": "CZE",
+    "nationCode2": "CZ",
+    "nationName": "Czech Republic"
+  },
+  {
+    "nationCode3": "ZAM",
+    "nationCode2": "ZM",
+    "nationName": "Zambia"
+  },
+  {
+    "nationCode3": "AUT",
+    "nationCode2": "AT",
+    "nationName": "Austria"
+  },
+  {
+    "nationCode3": "COL",
+    "nationCode2": "CO",
+    "nationName": "Colombia"
+  },
+  {
+    "nationCode3": "BFA",
+    "nationCode2": "BF",
+    "nationName": "Burkina Faso"
+  },
+  {
+    "nationCode3": "ROU",
+    "nationCode2": "RO",
+    "nationName": "Romania"
+  },
+  {
+    "nationCode3": "SVK",
+    "nationCode2": "SK",
+    "nationName": "Slovakia"
+  },
+  {
+    "nationCode3": "JPN",
+    "nationCode2": "JP",
+    "nationName": "Japan"
+  },
+  {
+    "nationCode3": "SEN",
+    "nationCode2": "SN",
+    "nationName": "Senegal"
+  },
+  {
+    "nationCode3": "CRO",
+    "nationCode2": "HR",
+    "nationName": "Croatia"
+  },
+  {
+    "nationCode3": "IRQ",
+    "nationCode2": "IQ",
+    "nationName": "Iraq"
+  },
+  {
+    "nationCode3": "KOR",
+    "nationCode2": "KR",
+    "nationName": "South Korea"
+  },
+  {
+    "nationCode3": "CAN",
+    "nationCode2": "CA",
+    "nationName": "Canada"
+  },
+  {
+    "nationCode3": "HUN",
+    "nationCode2": "HU",
+    "nationName": "Hungary"
+  },
+  {
+    "nationCode3": "MAR",
+    "nationCode2": "MA",
+    "nationName": "Morocco"
+  },
+  {
+    "nationCode3": "UZB",
+    "nationCode2": "UZ",
+    "nationName": "Uzbekistan"
+  },
+  {
+    "nationCode3": "GAB",
+    "nationCode2": "GA",
+    "nationName": "Gabon"
+  },
+  {
+    "nationCode3": "SRB",
+    "nationCode2": "RS",
+    "nationName": "Serbia"
+  },
+  {
+    "nationCode3": "EGY",
+    "nationCode2": "EG",
+    "nationName": "Egypt"
+  },
+  {
+    "nationCode3": "GRE",
+    "nationCode2": "GR",
+    "nationName": "Greece"
+  },
+  {
+    "nationCode3": "GAM",
+    "nationCode2": "GM",
+    "nationName": "Gambia"
+  },
+  {
+    "nationCode3": "UKR",
+    "nationCode2": "UA",
+    "nationName": "Ukraine"
+  },
+  {
+    "nationCode3": "ZIM",
+    "nationCode2": "ZW",
+    "nationName": "Zimbabwe"
+  },
+  {
+    "nationCode3": "KVX",
+    "nationCode2": "XK",
+    "nationName": "Kosovo"
+  },
+  {
+    "nationCode3": "ISL",
+    "nationCode2": "IS",
+    "nationName": "Iceland"
+  },
+  {
+    "nationCode3": "MSR",
+    "nationCode2": "MS",
+    "nationName": "Montserrat"
+  },
+  {
+    "nationCode3": "COD",
+    "nationCode2": "CD",
+    "nationName": "Democratic Republic of the Congo"
+  },
+  {
+    "nationCode3": "NZL",
+    "nationCode2": "NZ",
+    "nationName": "New Zealand"
+  }
+]
