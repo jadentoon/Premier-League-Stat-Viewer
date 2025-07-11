@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import {HiOutlineSearch} from "react-icons/hi";
-import nations from "../../data/nations.json"
 
-const Searchbar = () => {
+const Searchbar = ({array}) => {
 
   const [activeSearch, setActiveSearch] = useState([]);
 
@@ -11,10 +10,7 @@ const Searchbar = () => {
       setActiveSearch([])
       return false;
     }
-    var nationNames = nations.map(function (c) {
-      return c.nationName;
-    })
-    setActiveSearch((nationNames.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0,8)))
+    setActiveSearch((array.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0,8)))
   }
   return (
     <form className='w-[500px] relative'>
