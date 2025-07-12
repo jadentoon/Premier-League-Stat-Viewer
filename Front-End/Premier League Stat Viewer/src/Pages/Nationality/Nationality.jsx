@@ -1,19 +1,29 @@
+import { useEffect, useState } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 import nations from "../../data/nations.json";
 import { ReactCountryFlag } from "react-country-flag";
 
 const Nationality = () => {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [filteredNations, setFilteredNations] = useState([])
   const nationNames = nations.map(c => c.nationName);
+
+  useEffect(() =>{
+    const filtered = nations.filter(nation => 
+      nation.nationName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredNations(filtered)
+  }, [searchQuery])
+
   return (
     <div>
       <Navbar />
       <div className='relative z-0 min-h-screen px-4 py-20 space-y-8'>
         <h1 className='text-3xl font-bold mb-4 py-5'>NATIONALITIES</h1>
-        <Searchbar array={nationNames} />
-
+        <Searchbar array={nationNames} onSearch={setSearchQuery}/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {nations.map(nation => (
+          {filteredNations.map(nation => (
             <div key={nation.nationCode2} className="flex flex-col items-center">
               <ReactCountryFlag
                 countryCode={nation.nationCode2}
@@ -21,6 +31,7 @@ const Nationality = () => {
                 style={{
                   width: '400px',
                   height: '400px',
+                  cursor: 'pointer'
                 }}
                 title={nation.nationName}
               />
