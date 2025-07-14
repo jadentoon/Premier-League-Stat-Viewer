@@ -3,6 +3,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 import nations from "../../data/nations.json";
 import { ReactCountryFlag } from "react-country-flag";
+import {Link} from "react-router-dom"
 
 const Nationality = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -25,16 +26,18 @@ const Nationality = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredNations.map(nation => (
             <div key={nation.nationCode2} className="flex flex-col items-center">
-              <ReactCountryFlag
-                countryCode={nation.nationCode2}
-                svg
-                style={{
-                  width: '400px',
-                  height: '400px',
-                  cursor: 'pointer'
-                }}
-                title={nation.nationName}
-              />
+              <Link to={`/data?nation=${encodeURIComponent(nation.nationCode3)}`}>
+                <ReactCountryFlag
+                  countryCode={nation.nationCode2}
+                  svg
+                  style={{
+                    width: '400px',
+                    height: '400px',
+                    cursor: 'pointer'
+                  }}
+                  title={nation.nationName}
+                />
+              </Link>
               <p className="mt-2 text-center text-md font-medium">{nation.nationName}</p>
             </div>
           ))}

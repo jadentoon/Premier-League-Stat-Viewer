@@ -19,7 +19,7 @@ public class Player {
     private Integer min;
     private Double nineties_played;
     private Integer goals;
-    private Integer assists;
+    private Integer assists = 0;
     private Integer goals_and_assists;
     private Integer non_penalty_goals;
     private Integer penalty_goals;

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 import positions from "../../data/positions.json";
+import { Link } from "react-router-dom";
+
 
 const Position = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -23,7 +25,9 @@ const Position = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPositions.map(pos => (
                 <div key={pos.name} className="flex flex-col items-center">
-                    <img src={pos.image} alt="" className='w-[400px] h-[400px] cursor-pointer object-cover' />
+                    <Link to={`/data?pos=${encodeURIComponent(pos.code)}`}>
+                        <img src={pos.image} alt="" className='w-[400px] h-[400px] cursor-pointer object-cover' />
+                    </Link>
                     <p className="mt-2 text-center text-md font-medium">{pos.name}</p>
                 </div>
             ))}
