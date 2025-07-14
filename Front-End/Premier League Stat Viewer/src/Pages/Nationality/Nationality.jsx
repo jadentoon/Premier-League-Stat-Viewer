@@ -19,7 +19,7 @@ const Nationality = () => {
   return (
     <div>
       <Navbar />
-      <div className='relative z-0 min-h-screen px-4 py-20 space-y-8'>
+      <div className='relative z-0 min-h-screen px-4 py-20 space-y-8 bg-gray-100'>
         <h1 className='text-3xl font-bold mb-4 py-5'>NATIONALITIES</h1>
         <Searchbar array={nationNames} onSearch={setSearchQuery}/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

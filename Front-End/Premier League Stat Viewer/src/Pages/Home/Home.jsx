@@ -6,7 +6,7 @@ function Home() {
     return(
         <div className=' relative min-h-screen bg:gradient-to-b from-purple-50 to-white'>
             <Navbar />
-            <div className= 'relative z-0 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 space-y-8'>
+            <div className= 'bg-gray-100 relative z-0 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 space-y-8'>
                 <img 
                     src={premier_league_logo} 
                     alt="premier_league_logo" 

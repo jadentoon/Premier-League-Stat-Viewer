@@ -1,0 +1,22 @@
+[
+    {
+        "image": "/Positions/goalkeeper.jpg",
+        "code": "GK",
+        "name": "GoalKeeper"
+    },
+    {
+        "image": "/Positions/defender.jpg",
+        "code": "DF",
+        "name": "Defender"
+    },
+    {
+        "image": "/Positions/midfielder.jpg",
+        "code": "MF",
+        "name": "Midfielder"
+    },
+    {
+        "image": "/Positions/forward.jpg",
+        "code": "FW",
+        "name": "Forward"
+    }
+]

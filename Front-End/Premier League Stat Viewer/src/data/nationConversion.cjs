@@ -16,8 +16,8 @@ const manualCodes = {
   URU: { alpha2: "UY", name: "Uruguay" },
   NIR: { alpha2: "GB-NIR", name: "Northern Ireland" },
   CHI: { alpha2: "CL", name: "Chile" },
-  WAL: { alpha2: "GB-WAL", name: "Wales" },
-  SCO: { alpha2: "GB-SCO", name: "Scotland" },
+  WAL: { alpha2: "GB-WLS", name: "Wales" },
+  SCO: { alpha2: "GB-SCT", name: "Scotland" },
   POR: { alpha2: "PT", name: "Portugal" },
   BAN: { alpha2: "BD", name: "Bangladesh" },
   ZAM: { alpha2: "ZM", name: "Zambia" },
@@ -28,6 +28,7 @@ const manualCodes = {
   KVX: { alpha2: "XK", name: "Kosovo" }
 };
 const uniqueCodes = new Set();
+const uniquePosCodes = new Set();
 
 const inputPath = path.join(__dirname, "../../../../players.csv");
 const outputPath = path.join(__dirname, "nations.json");
