@@ -7,7 +7,7 @@ import { ReactCountryFlag } from "react-country-flag";
 const Nationality = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredNations, setFilteredNations] = useState([])
-  const nationNames = nations.map(c => c.nationName);
+  //const nationNames = nations.map(c => c.nationName);
 
   useEffect(() =>{
     const filtered = nations.filter(nation => 
@@ -21,7 +21,7 @@ const Nationality = () => {
       <Navbar />
       <div className='relative z-0 min-h-screen px-4 py-20 space-y-8 bg-gray-100'>
         <h1 className='text-3xl font-bold mb-4 py-5'>NATIONALITIES</h1>
-        <Searchbar array={nationNames} onSearch={setSearchQuery}/>
+        <Searchbar /*array={nationNames}*/ onSearch={setSearchQuery}/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredNations.map(nation => (
             <div key={nation.nationCode2} className="flex flex-col items-center">

@@ -1,7 +1,7 @@
 //import React, { useState } from 'react'
 import {HiOutlineSearch} from "react-icons/hi";
 
-const Searchbar = ({array, onSearch}) => {
+const Searchbar = ({/*array,*/ onSearch}) => {
 
   //const [activeSearch, setActiveSearch] = useState([]);
 
