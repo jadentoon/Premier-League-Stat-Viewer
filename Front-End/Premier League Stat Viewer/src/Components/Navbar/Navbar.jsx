@@ -9,7 +9,7 @@ function Navbar(){
         {label: "Clubs", icon: <HiOutlineUserGroup size="25"/>, route: "/clubs"},
         {label: "Nationalities", icon: <HiOutlineFlag size="25"/>, route: "/nationality"},
         {label: "Position", icon: <HiOutlineClipboardList  size="25"/>, route: "/position"},
-        {label: "Search", icon: <HiOutlineSearch size="25"/>, route: "/"},
+        {label: "Search", icon: <HiOutlineSearch size="25"/>, route: "/search"},
     ]
 
     const [nav, setNav] = useState(false)

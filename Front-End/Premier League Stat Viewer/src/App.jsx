@@ -3,6 +3,7 @@ import Home from './Pages/Home/Home'
 import Clubs from './Pages/Clubs/Clubs'
 import Nationality from "./Pages/Nationality/nationality"
 import Position from "./Pages/Position/Position"
+import Search from "./Pages/Search/Search"
 import PlayerData from "./Pages/Data Handling/PlayerData"
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/nationality" element={<Nationality />} />
           <Route path="/position" element={<Position />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/data" element={<PlayerData />} />
         </Routes>
       </BrowserRouter>
