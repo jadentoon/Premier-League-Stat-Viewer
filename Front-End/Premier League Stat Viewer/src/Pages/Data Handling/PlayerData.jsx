@@ -8,7 +8,7 @@ const PlayerData = () => {
     const [error, setError] = useState(null);
     
     useEffect(() => {
-         const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
         const squadData = params.get('squad');
         const nationData = params.get('nation');
         const posData = params.get('pos');
@@ -45,7 +45,6 @@ const PlayerData = () => {
     if (playerData.length === 0) return <div>Loading...</div>;
 
     return (
-
         <div>
             <Navbar />
             <div>

@@ -3,7 +3,6 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 
 const Search = () => {
-    const [searchQuery, setSearchQuery] = useState([])
     return (
         <div>
             <Navbar />
@@ -15,7 +14,10 @@ const Search = () => {
                     </header>
 
                     <div className='flex justify-center'>
-                        <Searchbar onSearch={setSearchQuery}/>
+                        <Searchbar 
+                        recommendations={true}
+                        //onSearch={(value) => console.log("Search input:", value)}
+                        />
                     </div>
                 </main>
             </div>

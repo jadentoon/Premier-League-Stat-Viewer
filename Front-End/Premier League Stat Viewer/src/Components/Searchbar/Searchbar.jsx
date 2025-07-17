@@ -1,39 +1,57 @@
-//import React, { useState } from 'react'
-import {HiOutlineSearch} from "react-icons/hi";
+import React, { useEffect, useState } from 'react'
+import { HiOutlineSearch } from "react-icons/hi";
+import axios from 'axios'
 
-const Searchbar = ({/*array,*/ onSearch}) => {
 
-  //const [activeSearch, setActiveSearch] = useState([]);
+const Searchbar = ({ recommendations, onSearch }) => {
+
+  const [activeSearch, setActiveSearch] = useState([]);
+  const [playerData, setPlayerData] = useState([]);
+  useEffect(() => {
+    if (recommendations) {
+      axios.get(`http://localhost:8081/api/v1/players`).then(
+        response => {
+          const names = response.data
+            .map(p => p?.player)
+            .filter(player => typeof player === 'string');
+          console.log(names)
+          setPlayerData(names);
+        }
+      ).catch(error => {
+        console.error('Error fetching players:', error);
+      });
+    }
+  }, [recommendations]);
 
   const handleSearch = (e) => {
-    onSearch(e.target.value)
-    /*
-    if (e.target.value == '') {
-      setActiveSearch([])
-      onSearch=(array)
-      return false;
+    if (recommendations) {
+      if (e.target.value == '') {
+        setActiveSearch([])
+        return false;
+      }
+      setActiveSearch((playerData.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0, 8)))
+    } else {
+      onSearch(e.target.value)
     }
-    setActiveSearch((array.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0,8)))
-    */
   }
+
 
   return (
     <form className='w-[500px] relative'>
       <div className='relative'>
-        <input type="search" 
-        placeholder='Search Here'
-        className='w-full p-4 rounded-full bg-purple-200'
-        onChange={(e) => handleSearch(e)}/>
+        <input type="search"
+          placeholder='Search Here'
+          className='w-full p-4 rounded-full bg-purple-200'
+          onChange={(e) => handleSearch(e)} />
         <button className='absolute right-1.5 top-1.5 -translate-y-0.5 p-4
         bg-purple-300 rounded-full cursor-pointer'>
-          <HiOutlineSearch/>
+          <HiOutlineSearch />
         </button>
       </div>
       {
-        /*
-        activeSearch.length > 0 && (
+        recommendations && activeSearch.length > 0 && (
           <div className='absolute top-20 p-4 bg-purple-200 w-full 
-          rounded-xl left-0.5 -translate-x-0.5 flex flex-col gap-2'>
+            rounded-xl left-0.5 -translate-x-0.5 flex flex-col gap-2'>
             {
               activeSearch.map(s => (
                 <span>{s}</span>
@@ -41,8 +59,7 @@ const Searchbar = ({/*array,*/ onSearch}) => {
             }
           </div>
         )
-        */
-      }      
+      }
     </form>
   )
 }
