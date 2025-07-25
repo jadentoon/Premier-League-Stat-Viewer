@@ -1,8 +1,8 @@
 import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
+import clubs from "../../data/clubs.json";
 
 function Clubs() {
-    var clubs = ["arsenal", "aston villa", "chelsea"] //Placeholder
     return (
         <div>
             <div>
@@ -17,6 +17,13 @@ function Clubs() {
                         <div className='flex justify-center'>
                             <Searchbar/>
                         </div>
+                        {clubs.map(club => (
+                            <img 
+                                src={club.badge} 
+                                alt={club.name} 
+                                className='w-[200px] h-[200px]' 
+                            />
+                        ))}
                     </main>
                 </div>
             </div>

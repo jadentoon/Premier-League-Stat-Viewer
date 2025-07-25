@@ -27,6 +27,17 @@ for team in data["teams"]:
     name = team["name"].replace(" ", "_")
     logo_url = team["crest"]
 
+    # Override Ipswich Town with a high-quality SVG
+    if name.lower() == "ipswich_town_fc":
+        print("Replacing Ipswich Town crest with HD version...")
+        logo_url = "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
+
+    if name.lower() == "nottingham_forest_fc":
+        print("Replacing Nottingham Forest crest with HD version...")
+        logo_url = "https://upload.wikimedia.org/wikipedia/en/e/e5/Nottingham_Forest_F.C._logo.svg"
+
+   
+
     print(f"Downloading {name} logo from {logo_url}")
     img_data = requests.get(logo_url).content
 
