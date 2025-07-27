@@ -47,19 +47,20 @@ const Nationality = () => {
                       key={nation.nationCode2}
                       className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center py-6 px-4 cursor-pointer"
                     >
-                      <ReactCountryFlag
-                        countryCode={nation.nationCode2}
-                        svg
-                        style={{
-                          width: '160px',
-                          height: 'auto',
-                          maxHeight: '200px',
-                          objectFit: 'cover',
-                          border: '2px solid gray',
-                          borderRadius: '8px'
-                        }}
-                        title={nation.nationName}
-                      />
+                      <div className='relative h-64 flex items-center justify-center bg-gray-100 w-full'>
+                        <ReactCountryFlag
+                          countryCode={nation.nationCode2}
+                          svg
+                          style={{
+                            width: '160px',
+                            height: 'auto',
+                            maxHeight: '200px',
+                            border: '2px solid gray',
+                            borderRadius: '8px'
+                          }}
+                          title={nation.nationName}
+                        />
+                      </div>
 
                       <p className="mt-4 text-center text-md font-semibold text-gray-800">
                         {nation.nationName}
