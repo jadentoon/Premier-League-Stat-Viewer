@@ -19,7 +19,7 @@ function Clubs() {
         <div>
             <div>
                 <Navbar />
-                <div className='relative z-0 min-h-screen px-4 py-20 bg-gray-100'>
+                <div className='relative z-0 min-h-screen px-4 py-20 bg-gray-50'>
                     <main className='max-w-7xl mx-auto space-y-8'>
                         <header className='text-center'>
                             <h1 className='text-4xl font-extrabold mt-4 text-gray-800'>Explore Clubs</h1>
@@ -43,7 +43,7 @@ function Clubs() {
                                                 <article
                                                     key={club.name}
                                                     className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-shadow duration-300'>
-                                                    <div className='relative h-64 flex items-center justify-center bg-gray-100'>
+                                                    <div className='relative h-90 md:h-64 flex items-center justify-center bg-gray-100'>
                                                         <img
                                                             src={club.badge}
                                                             alt={club.name}

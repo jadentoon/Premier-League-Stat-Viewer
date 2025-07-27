@@ -20,7 +20,7 @@ const Nationality = () => {
   return (
     <div>
       <Navbar />
-      <div className='relative z-0 min-h-screen px-4 py-20 bg-gray-100'>
+      <div className='relative z-0 min-h-screen px-4 py-20 bg-gray-50'>
         <main className='max-w-7xl mx-auto space-y-8'>
 
           <header className='text-center'>
@@ -61,10 +61,9 @@ const Nationality = () => {
                           title={nation.nationName}
                         />
                       </div>
-
-                      <p className="mt-4 text-center text-md font-semibold text-gray-800">
-                        {nation.nationName}
-                      </p>
+                        <p className="mt-4 text-center text-md font-semibold text-gray-800">
+                          {nation.nationName}
+                        </p>
                     </article>
                   </Link>
                 ))}
