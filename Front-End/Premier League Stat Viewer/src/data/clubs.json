@@ -1,82 +1,82 @@
 [
     {
-        "name": "Arsenal FC",
+        "name": "Arsenal",
         "badge": "/Clubs/Arsenal_FC.png"
     },
     {
-        "name": "Aston Villa FC",
+        "name": "Aston Villa",
         "badge": "/Clubs/Aston_Villa_FC.png"
     },
     {
-        "name": "Chelsea FC",
+        "name": "Chelsea",
         "badge": "/Clubs/Chelsea_FC.png"
     },
     {
-        "name": "Everton FC",
+        "name": "Everton",
         "badge": "/Clubs/Everton_FC.png"
     },
     {
-        "name": "Fulham FC",
+        "name": "Fulham",
         "badge": "/Clubs/Fulham_FC.png"
     },
     {
-        "name": "Liverpool FC",
+        "name": "Liverpool",
         "badge": "/Clubs/Liverpool_FC.png"
     },
     {
-        "name": "Manchester City FC",
+        "name": "Manchester City",
         "badge": "/Clubs/Manchester_City_FC.png"
     },
     {
-        "name": "Manchester United FC",
+        "name": "Manchester United",
         "badge": "/Clubs/Manchester_United_FC.png"
     },
     {
-        "name": "Newcastle United FC",
+        "name": "Newcastle United",
         "badge": "/Clubs/Newcastle_United_FC.png"
     },
     {
-        "name": "Tottenham Hotspur FC",
+        "name": "Tottenham Hotspur",
         "badge": "/Clubs/Tottenham_Hotspur_FC.png"
     },
     {
-        "name": "Wolverhampton Wanderers FC",
+        "name": "Wolverhampton Wanderers",
         "badge": "/Clubs/Wolverhampton_Wanderers_FC.png"
     },
     {
-        "name": "Leicester City FC",
+        "name": "Leicester City",
         "badge": "/Clubs/Leicester_City_FC.png"
     },
     {
-        "name": "Southampton FC",
+        "name": "Southampton",
         "badge": "/Clubs/Southampton_FC.png"
     },
     {
-        "name": "Ipswich Town FC",
+        "name": "Ipswich Town",
         "badge": "/Clubs/Ipswich_Town_FC.svg"
     },
     {
-        "name": "Nottingham Forest FC",
+        "name": "Nottingham Forest",
         "badge": "/Clubs/Nottingham_Forest_FC.svg"
     },
     {
-        "name": "Crystal Palace FC",
+        "name": "Crystal Palace",
         "badge": "/Clubs/Crystal_Palace_FC.png"
     },
     {
-        "name": "Brighton & Hove Albion FC",
+        "name": "Brighton & Hove Albion",
         "badge": "/Clubs/Brighton_&_Hove_Albion_FC.png"
     },
     {
-        "name": "Brentford FC",
+        "name": "Brentford",
         "badge": "/Clubs/Brentford_FC.png"
     },
     {
-        "name": "West Ham United FC",
+        "name": "West Ham United",
         "badge": "/Clubs/West_Ham_United_FC.png"
     },
     {
-        "name": "AFC Bournemouth",
+        "name": "A Bournemouth",
         "badge": "/Clubs/AFC_Bournemouth.png"
     }
 ]

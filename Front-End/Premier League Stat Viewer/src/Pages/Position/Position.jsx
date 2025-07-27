@@ -9,7 +9,7 @@ const Position = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredPositions, setFilteredPositions] = useState([])
 
-  useEffect(() =>{
+  useEffect(() => {
     const filtered = positions.filter(pos => 
       pos.name.toLowerCase().includes(searchQuery.toLowerCase())
     );

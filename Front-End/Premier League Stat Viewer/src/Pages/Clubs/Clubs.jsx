@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
 import Searchbar from '../../Components/Searchbar/Searchbar';
 import clubs from "../../data/clubs.json";
+import { Link } from 'react-router';
 
 function Clubs() {
+    const [searchQuery, setSearchQuery] = useState('')
+    const [filteredClubs, setFilteredClubs] = useState([]);
+
+    useEffect(() => {
+        const filtered = clubs.filter(club => 
+            club.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredClubs(filtered);
+    }, [searchQuery])
+
     return (
         <div>
             <div>
@@ -15,15 +27,35 @@ function Clubs() {
                         </header>
 
                         <div className='flex justify-center'>
-                            <Searchbar/>
+                            <Searchbar onSearch={setSearchQuery}/>
                         </div>
-                        {clubs.map(club => (
-                            <img 
-                                src={club.badge} 
-                                alt={club.name} 
-                                className='w-[200px] h-[200px]' 
-                            />
-                        ))}
+                        {
+                            filteredClubs.length === 0 ? (
+                                <p className='text-center text-gray-500 text-lgmt-10'>
+                                    No clubs found for "{searchQuery}"
+                                </p>
+                            )
+                            :
+                            (
+                                <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                                    {filteredClubs.map(club => (
+                                        <Link to={`/data?squad=${encodeURIComponent(club.name)}`}>
+                                            <article
+                                            key={club.name}
+                                            className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-shadow duration-300'>
+                                                <img 
+                                                src={club.badge} 
+                                                alt={club.name} 
+                                                className='w-[425px] h-[425px] cursor-pointer object-fit justify-center'/>
+                                                <div className='py-4'>
+                                                    <p className="text-center text-md font-semibold text-gray-800">{club.name}</p>
+                                                </div>
+                                            </article>
+                                        </Link>
+                                    ))}
+                                </section>
+                            )
+                        }
                     </main>
                 </div>
             </div>

@@ -46,7 +46,7 @@ for team in data["teams"]:
         f.write(img_data)
 
     teams_data.append({
-        "name": team["name"],
+        "name": team["name"].replace('FC', '').strip(),
         "badge": f"/Clubs/{name}{ext}"
     })
 
