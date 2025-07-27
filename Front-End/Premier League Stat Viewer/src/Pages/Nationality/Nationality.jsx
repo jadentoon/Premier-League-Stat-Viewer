@@ -51,7 +51,7 @@ const Nationality = () => {
                         countryCode={nation.nationCode2}
                         svg
                         style={{
-                          width: '250px',
+                          width: '160px',
                           height: 'auto',
                           maxHeight: '200px',
                           objectFit: 'cover',

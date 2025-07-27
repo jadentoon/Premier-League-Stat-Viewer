@@ -9,7 +9,7 @@ function Clubs() {
     const [filteredClubs, setFilteredClubs] = useState([]);
 
     useEffect(() => {
-        const filtered = clubs.filter(club => 
+        const filtered = clubs.filter(club =>
             club.name.toLowerCase().includes(searchQuery.toLowerCase())
         );
         setFilteredClubs(filtered);
@@ -27,7 +27,7 @@ function Clubs() {
                         </header>
 
                         <div className='flex justify-center'>
-                            <Searchbar onSearch={setSearchQuery}/>
+                            <Searchbar onSearch={setSearchQuery} />
                         </div>
                         {
                             filteredClubs.length === 0 ? (
@@ -35,26 +35,29 @@ function Clubs() {
                                     No clubs found for "{searchQuery}"
                                 </p>
                             )
-                            :
-                            (
-                                <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                                    {filteredClubs.map(club => (
-                                        <Link to={`/data?squad=${encodeURIComponent(club.name)}`}>
-                                            <article
-                                            key={club.name}
-                                            className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-shadow duration-300'>
-                                                <img 
-                                                src={club.badge} 
-                                                alt={club.name} 
-                                                className='w-[425px] h-[425px] cursor-pointer object-fit justify-center'/>
-                                                <div className='py-4'>
-                                                    <p className="text-center text-md font-semibold text-gray-800">{club.name}</p>
-                                                </div>
-                                            </article>
-                                        </Link>
-                                    ))}
-                                </section>
-                            )
+                                :
+                                (
+                                    <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                                        {filteredClubs.map(club => (
+                                            <Link to={`/data?squad=${encodeURIComponent(club.name)}`}>
+                                                <article
+                                                    key={club.name}
+                                                    className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-shadow duration-300'>
+                                                    <div className='relative h-64 flex items-center justify-center bg-gray-100'>
+                                                        <img
+                                                            src={club.badge}
+                                                            alt={club.name}
+                                                            className='w-40 h-40 cursor-pointer object-fit' 
+                                                        />
+                                                    </div>
+                                                    <div className='p-5'>
+                                                        <p className="text-center text-md font-semibold text-gray-800">{club.name}</p>
+                                                    </div>
+                                                </article>
+                                            </Link>
+                                        ))}
+                                    </section>
+                                )
                         }
                     </main>
                 </div>
