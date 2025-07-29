@@ -63,6 +63,8 @@ const PlayerData = () => {
                                 <th className='px-3 py-2 text-left'>Minutes Played</th>
                                 <th className='px-3 py-2 text-left'>90s Played</th>
                                 <th className='px-3 py-2 text-left'>Goals</th>
+                                <th className='px-3 py-2 text-left'>Assists</th>
+                                <th className='px-3 py-2 text-left'>Goals & Assists</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,6 +83,8 @@ const PlayerData = () => {
                                     <td className='px-3 py-2'>{player.min}</td>
                                     <td className='px-3 py-2'>{player.nineties_played.toFixed(2)}</td>
                                     <td className='px-3 py-2'>{player.goals}</td>
+                                    <td className='px-3 py-2'>{player.assists}</td>
+                                    <td className='px-3 py-2'>{player.goals_and_assists}</td>
                                 </tr>
                             ))}
                         </tbody>

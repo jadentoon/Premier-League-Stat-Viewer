@@ -19,7 +19,7 @@ public class Player {
     private Integer min;
     private Double nineties_played;
     private Integer goals;
-    private Integer assists = 0;
+    private Integer assists;
     private Integer goals_and_assists;
     private Integer non_penalty_goals;
     private Integer penalty_goals;
@@ -160,6 +160,62 @@ public class Player {
 
     public void setGoals(Integer goals) {
         this.goals = goals;
+    }
+
+    public Integer getAssists() {
+        return assists;
+    }
+
+    public Integer getGoals_and_assists() {
+        return goals_and_assists;
+    }
+
+    public Integer getNon_penalty_goals() {
+        return non_penalty_goals;
+    }
+
+    public Integer getPenalty_goals() {
+        return penalty_goals;
+    }
+
+    public Integer getPenalty_kicks_attempted() {
+        return penalty_kicks_attempted;
+    }
+
+    public Integer getYellow_cards() {
+        return yellow_cards;
+    }
+
+    public Integer getRed_cards() {
+        return red_cards;
+    }
+
+    public Double getExpected_goals() {
+        return expected_goals;
+    }
+
+    public Double getNon_penalty_xg() {
+        return non_penalty_xg;
+    }
+
+    public Double getAssisted_xg() {
+        return assisted_xg;
+    }
+
+    public Double getNpxg_xag() {
+        return npxg_xag;
+    }
+
+    public Double getProgressive_carries() {
+        return progressive_carries;
+    }
+
+    public Double getProgressive_passes() {
+        return progressive_passes;
+    }
+
+    public Double getProgressive_passes_rec() {
+        return progressive_passes_rec;
     }
 
     @Override
