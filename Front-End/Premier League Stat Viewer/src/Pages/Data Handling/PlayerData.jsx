@@ -52,19 +52,25 @@ const PlayerData = () => {
                     <table className='min-w-1/2 table-auto border-collapse '>
                         <thead className='bg-gray-200 text-gray-700 uppercase text-sm'>
                             <tr>
-                                <th className='px-3 py-2 text-left'>Name</th>
-                                <th className='px-3 py-2 text-left'>Nation</th>
-                                <th className='px-3 py-2 text-left'>Position</th>
-                                <th className='px-3 py-2 text-left'>Squad</th>
-                                <th className='px-3 py-2 text-left'>Age</th>
-                                <th className='px-3 py-2 text-left'>Born</th>
-                                <th className='px-3 py-2 text-left'>Matches Played</th>
-                                <th className='px-3 py-2 text-left'>Starts</th>
-                                <th className='px-3 py-2 text-left'>Minutes Played</th>
-                                <th className='px-3 py-2 text-left'>90s Played</th>
-                                <th className='px-3 py-2 text-left'>Goals</th>
-                                <th className='px-3 py-2 text-left'>Assists</th>
-                                <th className='px-3 py-2 text-left'>Goals & Assists</th>
+                                <th className='px-2 py-2 text-left'>Name</th>
+                                <th className='px-2 py-2 text-left'>Nation</th>
+                                <th className='px-2 py-2 text-left'>Position</th>
+                                <th className='px-2 py-2 text-left'>Squad</th>
+                                <th className='px-2 py-2 text-left'>Age</th>
+                                <th className='px-2 py-2 text-left'>Born</th>
+                                <th className='px-2 py-2 text-left'>Matches Played</th>
+                                <th className='px-2 py-2 text-left'>Starts</th>
+                                <th className='px-2 py-2 text-left'>Minutes Played</th>
+                                <th className='px-2 py-2 text-left'>90s Played</th>
+                                <th className='px-2 py-2 text-left'>Goals</th>
+                                <th className='px-2 py-2 text-left'>Assists</th>
+                                <th className='px-2 py-2 text-left'>Goals & Assists</th>
+                                <th className='px-2 py-2 text-left'>Non Penalty Goals</th>
+                                <th className='px-2 py-2 text-left'>Penalty Goals</th>
+                                <th className='px-2 py-2 text-left'>Penalty Kicks Attempted</th>
+                                <th className='px-2 py-2 text-left'>Yellow Cards</th>
+                                <th className='px-2 py-2 text-left'>Red Cards</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -72,19 +78,25 @@ const PlayerData = () => {
                                 <tr 
                                 key={player.id}
                                 className={`border-b ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gray-100`}>
-                                    <td className='px-3 py-2'>{player.player}</td>
-                                    <td className='px-3 py-2'>{player.nation}</td>
-                                    <td className='px-3 py-2'>{player.pos}</td>
-                                    <td className='px-3 py-2'>{player.squad}</td>
-                                    <td className='px-3 py-2'>{player.age}</td>
-                                    <td className='px-3 py-2'>{player.born}</td>
-                                    <td className='px-3 py-2'>{player.matches_played}</td>
-                                    <td className='px-3 py-2'>{player.starts}</td>
-                                    <td className='px-3 py-2'>{player.min}</td>
-                                    <td className='px-3 py-2'>{player.nineties_played.toFixed(2)}</td>
-                                    <td className='px-3 py-2'>{player.goals}</td>
-                                    <td className='px-3 py-2'>{player.assists}</td>
-                                    <td className='px-3 py-2'>{player.goals_and_assists}</td>
+                                    <td className='px-2 py-2'>{player.player}</td>
+                                    <td className='px-2 py-2'>{player.nation}</td>
+                                    <td className='px-2 py-2'>{player.pos}</td>
+                                    <td className='px-2 py-2'>{player.squad}</td>
+                                    <td className='px-2 py-2'>{player.age}</td>
+                                    <td className='px-2 py-2'>{player.born}</td>
+                                    <td className='px-2 py-2'>{player.matches_played}</td>
+                                    <td className='px-2 py-2'>{player.starts}</td>
+                                    <td className='px-2 py-2'>{player.min}</td>
+                                    <td className='px-2 py-2'>{player.nineties_played.toFixed(2)}</td>
+                                    <td className='px-2 py-2'>{player.goals}</td>
+                                    <td className='px-2 py-2'>{player.assists}</td>
+                                    <td className='px-2 py-2'>{player.goals_and_assists}</td>
+                                    <td className='px-2 py-2'>{player.non_penalty_goals}</td>
+                                    <td className='px-2 py-2'>{player.penalty_goals}</td>
+                                    <td className='px-2 py-2'>{player.penalty_kicks_attempted}</td>
+                                    <td className='px-2 py-2'>{player.yellow_cards}</td>
+                                    <td className='px-2 py-2'>{player.red_cards}</td>
+
                                 </tr>
                             ))}
                         </tbody>
