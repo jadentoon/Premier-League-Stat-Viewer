@@ -9,11 +9,20 @@ const PlayerData = () => {
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
+        const playerData = params.get('name');
         const squadData = params.get('squad');
         const nationData = params.get('nation');
         const posData = params.get('pos');
 
-        if (squadData) {
+        if (playerData) {
+            axios.get(`http://localhost:8081/api/v1/players?name=${encodeURIComponent(playerData)}`)
+                .then(response => {
+                    setPlayerData(response.data)
+                })
+                .catch(error => {
+                    setError(error);
+                })
+        } else if (squadData) {
             axios.get(`http://localhost:8081/api/v1/players?squad=${encodeURIComponent(squadData)}`)
                 .then(response => {
                     setPlayerData(response.data)

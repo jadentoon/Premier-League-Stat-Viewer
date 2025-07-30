@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { HiOutlineSearch } from "react-icons/hi";
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 
 const Searchbar = ({ recommendations, onSearch }) => {
 
   const [activeSearch, setActiveSearch] = useState([]);
   const [playerData, setPlayerData] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (recommendations) {
       axios.get(`http://localhost:8081/api/v1/players`).then(
@@ -35,6 +38,10 @@ const Searchbar = ({ recommendations, onSearch }) => {
     }
   }
 
+  const handleSearchClick = search => {
+    navigate(`/data/?name=${encodeURIComponent(search)}`);
+  };
+
 
   return (
     <form className='w-[500px] relative'>
@@ -53,8 +60,12 @@ const Searchbar = ({ recommendations, onSearch }) => {
           <div className='absolute top-20 p-4 bg-purple-200 w-full 
             rounded-xl left-0.5 -translate-x-0.5 flex flex-col gap-2'>
             {
-              activeSearch.map(s => (
-                <span>{s}</span>
+              activeSearch.map((s,index) => (
+                <span
+                key={index}
+                className='cursor-pointer hover:bg-purple-300 p-2 rounded-lg'
+                onClick={() => handleSearchClick(s)}
+                >{s}</span>
               ))
             }
           </div>
