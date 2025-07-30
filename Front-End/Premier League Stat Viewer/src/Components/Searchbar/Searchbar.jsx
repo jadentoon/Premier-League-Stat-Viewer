@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Searchbar = ({ recommendations, onSearch }) => {
 
   const [activeSearch, setActiveSearch] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const [playerData, setPlayerData] = useState([]);
   const navigate = useNavigate();
 
@@ -29,10 +30,12 @@ const Searchbar = ({ recommendations, onSearch }) => {
   const handleSearch = (e) => {
     if (recommendations) {
       if (e.target.value == '') {
-        setActiveSearch([])
+        setActiveSearch([]);
+        setSearchQuery('');
         return false;
       }
-      setActiveSearch((playerData.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0, 8)))
+      setActiveSearch((playerData.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0, 8)));
+      setSearchQuery(e.target.value);
     } else {
       onSearch(e.target.value)
     }
@@ -44,14 +47,16 @@ const Searchbar = ({ recommendations, onSearch }) => {
 
 
   return (
-    <form className='w-[500px] relative'>
+    <div className='w-[500px] relative'>
       <div className='relative'>
         <input type="search"
           placeholder='Search Here'
           className='w-full p-4 rounded-full bg-purple-200'
           onChange={(e) => handleSearch(e)} />
-        <button className='absolute right-1.5 top-1.5 -translate-y-0.5 p-4
-        bg-purple-300 rounded-full cursor-pointer'>
+        <button 
+        className='absolute right-1.5 top-1.5 -translate-y-0.5 p-4
+        bg-purple-300 rounded-full cursor-pointer'
+        onClick={() => handleSearchClick(searchQuery)}>
           <HiOutlineSearch />
         </button>
       </div>
@@ -71,7 +76,7 @@ const Searchbar = ({ recommendations, onSearch }) => {
           </div>
         )
       }
-    </form>
+    </div>
   )
 }
 
