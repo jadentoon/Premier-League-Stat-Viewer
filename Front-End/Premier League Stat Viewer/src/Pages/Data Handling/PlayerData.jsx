@@ -86,7 +86,7 @@ const PlayerData = () => {
                             {playerData.map((player,index) => (
                                 <tr 
                                 key={player.id}
-                                className={`border-b ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gray-100`}>
+                                className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gray-100`}>
                                     <td className='px-2 py-2'>{player.player}</td>
                                     <td className='px-2 py-2'>{player.nation}</td>
                                     <td className='px-2 py-2'>{player.pos}</td>
@@ -105,7 +105,6 @@ const PlayerData = () => {
                                     <td className='px-2 py-2'>{player.penalty_kicks_attempted}</td>
                                     <td className='px-2 py-2'>{player.yellow_cards}</td>
                                     <td className='px-2 py-2'>{player.red_cards}</td>
-
                                 </tr>
                             ))}
                         </tbody>

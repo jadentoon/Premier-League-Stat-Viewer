@@ -39,7 +39,7 @@ function Clubs() {
                                 (
                                     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                                         {filteredClubs.map(club => (
-                                            <Link to={`/data?squad=${encodeURIComponent(club.name)}`}>
+                                            <Link to={`/data?squad=${encodeURIComponent(club.db_name)}`}>
                                                 <article
                                                     key={club.name}
                                                     className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-shadow duration-300'>

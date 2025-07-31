@@ -23,6 +23,16 @@ os.makedirs(badge_folder_path, exist_ok=True)
 
 teams_data = []
 
+db_names = {
+    "Manchester United" : "Manchester Utd",
+    "Newcastle United" : "Newcastle Utd",
+    "Tottenham Hotspur" : "Tottenham",
+    "Wolverhampton Wanderers" : "Wolves",
+    "Nottingham Forest" : "Nott'ham Forest",
+    "Brighton & Hove Albion" : "Brighton",
+    "West Ham United" : "West Ham"
+}
+
 for team in data["teams"]:
     name = team["name"].replace(" ", "_")
     logo_url = team["crest"]
@@ -45,9 +55,15 @@ for team in data["teams"]:
     with open(f"{badge_folder_path}/{name}{ext}", "wb") as f:
         f.write(img_data)
 
+    db_name = team['name'].replace('AFC', '').replace('FC', '').strip()
+
+    if db_name in db_names:
+        db_name = db_names[db_name]
+
     teams_data.append({
-        "name": team["name"].replace('AFC', '').replace('FC', '').strip(),
-        "badge": f"/Clubs/{name}{ext}"
+        "name": team["name"],
+        "badge": f"/Clubs/{name}{ext}",
+        "db_name": db_name
     })
 
     time.sleep(1)

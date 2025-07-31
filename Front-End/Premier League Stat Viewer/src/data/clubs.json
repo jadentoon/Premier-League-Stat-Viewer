@@ -1,82 +1,102 @@
 [
     {
-        "name": "Arsenal",
-        "badge": "/Clubs/Arsenal_FC.png"
+        "name": "Arsenal FC",
+        "badge": "/Clubs/Arsenal_FC.png",
+        "db_name": "Arsenal"
     },
     {
-        "name": "Aston Villa",
-        "badge": "/Clubs/Aston_Villa_FC.png"
+        "name": "Aston Villa FC",
+        "badge": "/Clubs/Aston_Villa_FC.png",
+        "db_name": "Aston Villa"
     },
     {
-        "name": "Chelsea",
-        "badge": "/Clubs/Chelsea_FC.png"
+        "name": "Chelsea FC",
+        "badge": "/Clubs/Chelsea_FC.png",
+        "db_name": "Chelsea"
     },
     {
-        "name": "Everton",
-        "badge": "/Clubs/Everton_FC.png"
+        "name": "Everton FC",
+        "badge": "/Clubs/Everton_FC.png",
+        "db_name": "Everton"
     },
     {
-        "name": "Fulham",
-        "badge": "/Clubs/Fulham_FC.png"
+        "name": "Fulham FC",
+        "badge": "/Clubs/Fulham_FC.png",
+        "db_name": "Fulham"
     },
     {
-        "name": "Liverpool",
-        "badge": "/Clubs/Liverpool_FC.png"
+        "name": "Liverpool FC",
+        "badge": "/Clubs/Liverpool_FC.png",
+        "db_name": "Liverpool"
     },
     {
-        "name": "Manchester City",
-        "badge": "/Clubs/Manchester_City_FC.png"
+        "name": "Manchester City FC",
+        "badge": "/Clubs/Manchester_City_FC.png",
+        "db_name": "Manchester City"
     },
     {
-        "name": "Manchester United",
-        "badge": "/Clubs/Manchester_United_FC.png"
+        "name": "Manchester United FC",
+        "badge": "/Clubs/Manchester_United_FC.png",
+        "db_name": "Manchester Utd"
     },
     {
-        "name": "Newcastle United",
-        "badge": "/Clubs/Newcastle_United_FC.png"
+        "name": "Newcastle United FC",
+        "badge": "/Clubs/Newcastle_United_FC.png",
+        "db_name": "Newcastle Utd"
     },
     {
-        "name": "Tottenham Hotspur",
-        "badge": "/Clubs/Tottenham_Hotspur_FC.png"
+        "name": "Tottenham Hotspur FC",
+        "badge": "/Clubs/Tottenham_Hotspur_FC.png",
+        "db_name": "Tottenham"
     },
     {
-        "name": "Wolverhampton Wanderers",
-        "badge": "/Clubs/Wolverhampton_Wanderers_FC.png"
+        "name": "Wolverhampton Wanderers FC",
+        "badge": "/Clubs/Wolverhampton_Wanderers_FC.png",
+        "db_name": "Wolves"
     },
     {
-        "name": "Leicester City",
-        "badge": "/Clubs/Leicester_City_FC.png"
+        "name": "Leicester City FC",
+        "badge": "/Clubs/Leicester_City_FC.png",
+        "db_name": "Leicester City"
     },
     {
-        "name": "Southampton",
-        "badge": "/Clubs/Southampton_FC.png"
+        "name": "Southampton FC",
+        "badge": "/Clubs/Southampton_FC.png",
+        "db_name": "Southampton"
     },
     {
-        "name": "Ipswich Town",
-        "badge": "/Clubs/Ipswich_Town_FC.svg"
+        "name": "Ipswich Town FC",
+        "badge": "/Clubs/Ipswich_Town_FC.svg",
+        "db_name": "Ipswich Town"
     },
     {
-        "name": "Nottingham Forest",
-        "badge": "/Clubs/Nottingham_Forest_FC.svg"
+        "name": "Nottingham Forest FC",
+        "badge": "/Clubs/Nottingham_Forest_FC.svg",
+        "db_name": "Nott'ham Forest"
     },
     {
-        "name": "Crystal Palace",
-        "badge": "/Clubs/Crystal_Palace_FC.png"
+        "name": "Crystal Palace FC",
+        "badge": "/Clubs/Crystal_Palace_FC.png",
+        "db_name": "Crystal Palace"
     },
     {
-        "name": "Brighton & Hove Albion",
-        "badge": "/Clubs/Brighton_&_Hove_Albion_FC.png"
+        "name": "Brighton & Hove Albion FC",
+        "badge": "/Clubs/Brighton_&_Hove_Albion_FC.png",
+        "db_name": "Brighton"
     },
     {
-        "name": "Brentford",
-        "badge": "/Clubs/Brentford_FC.png"
+        "name": "Brentford FC",
+        "badge": "/Clubs/Brentford_FC.png",
+        "db_name": "Brentford"
     },
     {
-        "name": "West Ham United",
-        "badge": "/Clubs/West_Ham_United_FC.png"
+        "name": "West Ham United FC",
+        "badge": "/Clubs/West_Ham_United_FC.png",
+        "db_name": "West Ham"
     },
     {
-        "name": "Bournemouth",
-        "badge": "/Clubs/AFC_Bournemouth.png"
+        "name": "AFC Bournemouth",
+        "badge": "/Clubs/AFC_Bournemouth.png",
+        "db_name": "Bournemouth"
     }
 ]
