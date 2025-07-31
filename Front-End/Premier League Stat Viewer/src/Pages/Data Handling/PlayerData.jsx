@@ -14,40 +14,21 @@ const PlayerData = () => {
         const nationData = params.get('nation');
         const posData = params.get('pos');
 
-        if (playerData) {
-            axios.get(`http://localhost:8081/api/v1/players?name=${encodeURIComponent(playerData)}`)
-                .then(response => {
-                    setPlayerData(response.data)
-                })
-                .catch(error => {
-                    setError(error);
-                })
-        } else if (squadData) {
-            axios.get(`http://localhost:8081/api/v1/players?squad=${encodeURIComponent(squadData)}`)
-                .then(response => {
-                    setPlayerData(response.data)
-                })
-                .catch(error => {
-                    setError(error);
-                })
-        } else if (nationData) {
-            axios.get(`http://localhost:8081/api/v1/players?nation=${encodeURIComponent(nationData)}`)
-                .then(response => {
-                    console.log("Data: ", response.data)
-                    setPlayerData(response.data)
-                })
-                .catch(error => {
-                    setError(error)
-                })
-        } else if (posData) {
-            axios.get(`http://localhost:8081/api/v1/players?pos=${encodeURIComponent(posData)}`)
-                .then(response => {
-                    setPlayerData(response.data)
-                })
-                .catch(error => {
-                    setError(error)
-                })
-        }
+        const fetchData = async (queryParam, value) => {
+            try {
+                const response = await axios.get(
+                    `http://localhost:8081/api/v1/players?${queryParam}=${encodeURIComponent(value)}`
+                )
+                setPlayerData(response.data);
+            } catch (error) {
+                setError(error);
+            }
+        };
+        if (playerData) fetchData('name', playerData);
+        else if (squadData) fetchData('squad', squadData);
+        else if (nationData) fetchData('nation', nationData);
+        else if (posData) fetchData('pos', posData);
+        
     }, []);
 
     if (error) return <div>Error: {error.message}</div>;
@@ -67,18 +48,18 @@ const PlayerData = () => {
                                 <th className='px-2 py-2 text-left'>Squad</th>
                                 <th className='px-2 py-2 text-left'>Age</th>
                                 <th className='px-2 py-2 text-left'>Born</th>
-                                <th className='px-2 py-2 text-left'>Matches Played</th>
+                                <th className='px-2 py-2 text-left'>Matches</th>
                                 <th className='px-2 py-2 text-left'>Starts</th>
-                                <th className='px-2 py-2 text-left'>Minutes Played</th>
-                                <th className='px-2 py-2 text-left'>90s Played</th>
-                                <th className='px-2 py-2 text-left'>Goals</th>
-                                <th className='px-2 py-2 text-left'>Assists</th>
-                                <th className='px-2 py-2 text-left'>Goals & Assists</th>
-                                <th className='px-2 py-2 text-left'>Non Penalty Goals</th>
-                                <th className='px-2 py-2 text-left'>Penalty Goals</th>
-                                <th className='px-2 py-2 text-left'>Penalty Kicks Attempted</th>
-                                <th className='px-2 py-2 text-left'>Yellow Cards</th>
-                                <th className='px-2 py-2 text-left'>Red Cards</th>
+                                <th className='px-2 py-2 text-left'>Minutes</th>
+                                <th className='px-2 py-2 text-left'>90s</th>
+                                <th className='px-2 py-2 text-left'>Gls</th>
+                                <th className='px-2 py-2 text-left'>Ast</th>
+                                <th className='px-2 py-2 text-left'>G+A</th>
+                                <th className='px-2 py-2 text-left'>Non-Pen Gls</th>
+                                <th className='px-2 py-2 text-left'>Pen Gls</th>
+                                <th className='px-2 py-2 text-left'>Pen Kicks</th>
+                                <th className='px-2 py-2 text-left'>Yellows</th>
+                                <th className='px-2 py-2 text-left'>Reds</th>
 
                             </tr>
                         </thead>
@@ -86,7 +67,7 @@ const PlayerData = () => {
                             {playerData.map((player,index) => (
                                 <tr 
                                 key={player.id}
-                                className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gray-100`}>
+                                className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-yellow-100`}>
                                     <td className='px-2 py-2'>{player.player}</td>
                                     <td className='px-2 py-2'>{player.nation}</td>
                                     <td className='px-2 py-2'>{player.pos}</td>
