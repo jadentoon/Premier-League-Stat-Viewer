@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 
-const Searchbar = ({ recommendations, onSearch }) => {
+const Searchbar = ({ recommendations, onSearch, location }) => {
 
   const [activeSearch, setActiveSearch] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -29,20 +29,19 @@ const Searchbar = ({ recommendations, onSearch }) => {
 
   const handleSearch = (e) => {
     if (recommendations) {
+      setSearchQuery(e.target.value);
       if (e.target.value == '') {
         setActiveSearch([]);
-        setSearchQuery('');
         return false;
       }
       setActiveSearch((playerData.filter(n => n.toLowerCase().includes(e.target.value.toLowerCase())).slice(0, 8)));
-      setSearchQuery(e.target.value);
     } else {
       onSearch(e.target.value)
     }
   }
 
   const handleSearchClick = search => {
-    navigate(`/data/?name=${encodeURIComponent(search)}`);
+    navigate(`/data/?${location}=${encodeURIComponent(search)}`);
   };
 
 
@@ -51,14 +50,16 @@ const Searchbar = ({ recommendations, onSearch }) => {
       <div className='relative'>
         <input type="search"
           placeholder='Search Here'
-          className='w-full p-4 rounded-full bg-purple-200'
+          className='w-full p-4 rounded-full bg-purple-200 '
           onChange={(e) => handleSearch(e)} />
+        {recommendations ?
         <button 
         className='absolute right-1.5 top-1.5 -translate-y-0.5 p-4
         bg-purple-300 rounded-full cursor-pointer'
         onClick={() => handleSearchClick(searchQuery)}>
           <HiOutlineSearch />
         </button>
+        : ''}
       </div>
       {
         recommendations && activeSearch.length > 0 && (

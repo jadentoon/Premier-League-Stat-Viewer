@@ -16,7 +16,7 @@ const Search = () => {
                     <div className='flex justify-center'>
                         <Searchbar 
                         recommendations={true}
-                        //onSearch={(value) => console.log("Search input:", value)}
+                        location={'name'}
                         />
                     </div>
                 </main>

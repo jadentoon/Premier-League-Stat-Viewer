@@ -29,7 +29,7 @@ const Nationality = () => {
           </header>
 
           <div className='flex justify-center'>
-            <Searchbar onSearch={setSearchQuery} />
+            <Searchbar onSearch={setSearchQuery} location={'nation'}/>
           </div>
 
           {
