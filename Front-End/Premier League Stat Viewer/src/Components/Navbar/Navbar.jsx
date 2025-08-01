@@ -19,11 +19,11 @@ function Navbar(){
     return(
         <>
             <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-[50px] bg-purple-300 drop-shadow-lg z-50'>
-                <ul className='hidden md:flex gap-x-10'>
+                <ul className='hidden md:flex w-full justify-between'>
                     {navItems.map((item, index) => (
                         <li
                         key={item.label}
-                        className="p-4 cursor-pointer text-md"
+                        className="p-4 cursor-pointer text-md w-20"
                         onMouseEnter={() => setHover(index)}
                         onMouseLeave={() => setHover(null)}
                         >
