@@ -5,7 +5,7 @@ import "./Home.css";
 
 function Home() {
     return(
-        <div className=' relative min-h-screen bg-gradient-to-b from-purple-200 via-purple-300 to-purple-200 overflow-hidden'>
+        <div className=' relative min-h-screen bg-gradient-to-b from-purple-200 via-purple-100 to-purple-100 overflow-hidden'>
 
             <Navbar />
             <div className= 'relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 space-y-8'>

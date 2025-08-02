@@ -5,7 +5,7 @@ import nations from "../../data/nations.json";
 import { ReactCountryFlag } from "react-country-flag";
 import { Link } from "react-router-dom"
 
-const Nationality = () => {
+const Nationality = () => { 
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredNations, setFilteredNations] = useState([])
   //const nationNames = nations.map(c => c.nationName);
@@ -29,7 +29,7 @@ const Nationality = () => {
           </header>
 
           <div className='flex justify-center'>
-            <Searchbar onSearch={setSearchQuery} location={'nation'}/>
+            <Searchbar onSearch={setSearchQuery} location={'nation'} />
           </div>
 
           {
@@ -61,9 +61,9 @@ const Nationality = () => {
                           title={nation.nationName}
                         />
                       </div>
-                        <p className="mt-4 text-center text-md font-semibold text-gray-800">
-                          {nation.nationName}
-                        </p>
+                      <p className="mt-4 text-center text-md font-semibold text-gray-800">
+                        {nation.nationName}
+                      </p>
                     </article>
                   </Link>
                 ))}
