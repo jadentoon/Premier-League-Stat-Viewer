@@ -18,7 +18,7 @@ function Navbar(){
 
     return(
         <>
-            <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-[50px] bg-purple-300 drop-shadow-lg z-50'>
+            <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-[50px] bg-purple-300 drop-shadow-xl z-50'>
                 <ul className='hidden md:flex w-full justify-between'>
                     {navItems.map((item, index) => (
                         <li

@@ -5,7 +5,7 @@ import "./Home.css";
 
 function Home() {
     return(
-        <div className=' relative min-h-screen bg-gradient-to-b from-purple-200 via-white to-purple-50 overflow-hidden'>
+        <div className=' relative min-h-screen bg-gradient-to-b from-purple-200 via-purple-300 to-purple-200 overflow-hidden'>
 
             <Navbar />
             <div className= 'relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 space-y-8'>
@@ -17,7 +17,7 @@ function Home() {
                 <h1 className='text-3xl md:text-5xl font-bold text-purple-900 fade-in delay-200'>
                     Welcome to the Premier League Stat Viewer
                 </h1>
-                <p className='text-gray-600 max-w-xl fade-in delay-400'>
+                <p className='text-gray-700 max-w-xl fade-in delay-400'>
                     Easily look up stats for all your favourite players in the Premier League.
                 </p>
                 <Link to="/clubs">
