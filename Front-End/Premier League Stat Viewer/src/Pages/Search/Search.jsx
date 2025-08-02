@@ -4,16 +4,20 @@ import Searchbar from '../../Components/Searchbar/Searchbar';
 
 const Search = () => {
     return (
-        <div>
+        <div className='relative min-h-screen bg-gradient-to-b from-purple-100 via-white to-purple-50 overflow-hidden'>
             <Navbar />
-            <div className='relative z-0 min-h-screen px-4 py-20 bg-gray-100'>
+            <div className='z-10 min-h-screen px-4 py-20'>
                 <main className='max-w-7xl mx-auto space-y-8'>
-                    <header className='text-center'>
-                        <h1 className='text-4xl font-extrabold mt-4 text-gray-800'>Search Players</h1>
-                        <p className='text-gray-500 mt-3'>Use the search bar to search for players.</p>
+                    <header className='text-center fade-in'>
+                        <h1 className='text-4xl md:text-5xl font-extrabold mt-4 text-purple-900'>
+                            Search Players
+                        </h1>
+                        <p className='text-gray-600 mt-3'>
+                            Use the search bar to search for players.
+                        </p>
                     </header>
 
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center fade-in delay-400'>
                         <Searchbar 
                         recommendations={true}
                         location={'name'}
