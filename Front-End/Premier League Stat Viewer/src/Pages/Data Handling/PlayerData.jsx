@@ -34,16 +34,28 @@ const PlayerData = () => {
     }, []);
 
     return (
-        <div className='min-h-screen bg-gray-50'>
+        <div className='relative min-h-screen bg-gradient-to-b from-purple-100 via-white to-purple-50 overflow-hidden'>
             <Navbar />
-            <div className='flex justify-center items-center z-0 px-4 py-25'>
+            <div className='max-w-7xl mx-auto z-10 px-4 py-25'>
+                <header className='text-center fade-in'>
+                    <h1 className='text-4xl md:text-5xl font-extrabold mt-4 text-purple-900'>
+                        Player Statistics
+                    </h1>
+                    <p className='text-gray-600 mt-3'>
+                        {param ? (
+                            <>Showing stats for: <span className='font-semibold text-purple-700'>"{param}"</span></>
+                        ) : (
+                            "Loading player data..."
+                        )}
+                    </p>
+                </header>
                 {
-                    error ? <div>Error: {error.message}</div> :
-                        playerData.length === 0 ? <div>Loading...</div> :
+                    error ? <div className='text-center text-red-600 text-lg'>Error: {error.message}</div> :
+                        playerData.length === 0 ? <div className='text-center text-gray-500 text-lg animate-pulse'>Loading...</div> :
 
-                            <div className='overflow-x-auto bg-white shadow-lg rounded-2xl mt-2'>
-                                <table className='min-w-1/2 table-auto border-collapse p-5'>
-                                    <thead className='bg-gray-200 text-gray-700 uppercase text-sm'>
+                            <div className='overflow-x-auto bg-white shadow-lg rounded-2xl mt-4 border border-purple-100'>
+                                <table className='min-w-1/2 table-auto border-collapse p-5 fade-in delay-1000'>
+                                    <thead className='bg-purple-300 text-purple-900 uppercase text-sm'>
                                         <tr>
                                             <th className='px-2 py-2 text-left'>Name</th>
                                             <th className='px-2 py-2 text-left'>Nation</th>
@@ -70,7 +82,7 @@ const PlayerData = () => {
                                         {playerData.map((player, index) => (
                                             <tr
                                                 key={player.id}
-                                                className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-yellow-100`}>
+                                                className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-purple-50'} hover:bg-yellow-100`}>
                                                 <td className='px-2 py-2'>{player.player}</td>
                                                 <td className='px-2 py-2'>{player.nation}</td>
                                                 <td className='px-2 py-2'>{player.pos}</td>
