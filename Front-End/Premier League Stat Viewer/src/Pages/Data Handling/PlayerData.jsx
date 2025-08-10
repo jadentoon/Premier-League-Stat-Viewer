@@ -7,6 +7,7 @@ const PlayerData = () => {
     const [playerData, setPlayerData] = useState([]);
     const [param, setParam] = useState('');
     const [error, setError] = useState(null);
+    const [visibleCount, setVisibleCount] = useState(10);
 
     const fetchData = useCallback(async (queryParam, value) => {
         setParam(value);
@@ -32,6 +33,10 @@ const PlayerData = () => {
         }
     }, [fetchData]);
 
+    const showMore = () => {
+        setVisibleCount(prev => prev + 10);
+    }
+
     return (
         <div className='relative min-h-screen bg-gradient-to-b from-purple-100 via-white to-purple-50 overflow-hidden'>
             <Navbar />
@@ -51,9 +56,9 @@ const PlayerData = () => {
                 {
                     error ? <div className='text-center text-red-600 text-lg mt-4'>Error: {error.message}</div> :
                         playerData.length === 0 ? <div className='text-center text-gray-500 text-lg animate-pulse mt-4'>Loading...</div> :
-
+                        <>
                             <div className='overflow-x-auto bg-white shadow-lg rounded-2xl mt-4 border border-purple-100'>
-                                <table className='min-w-1/2 table-auto border-collapse p-5 fade-in delay-1000'>
+                                <table className='min-w-1/2 table-auto border-collapse p-5 fade-in delay-700'>
                                     <thead className='bg-purple-300 text-purple-900 uppercase text-sm'>
                                         <tr>
                                             {["Name", "Nation", "Position", "Squad", "Age", "Born", "Matches", "Starts", "Minutes", "90s", "Gls",
@@ -64,7 +69,7 @@ const PlayerData = () => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {playerData.map((player, index) => (
+                                        {playerData.slice(0, visibleCount).map((player, index) => (
                                             <tr
                                                 key={player.id}
                                                 className={`border-b h-25 ${index % 2 === 0 ? 'bg-white' : 'bg-purple-50'} hover:bg-yellow-100`}>
@@ -80,7 +85,18 @@ const PlayerData = () => {
                                         ))}
                                     </tbody>
                                 </table>
+                                
                             </div>
+                            {visibleCount < playerData.length && (
+                                    <div className='text-center mt-4'>
+                                        <button 
+                                        onClick={showMore}
+                                        className='bg-gradient-to-r from-purple-500 to-purple-700 shadow-lg hover:scale-105 hover:shadow-2xl text-white py-2 px-4 rounded-full cursor-pointer transition-all duration-300 fade-in delay-1000'>
+                                            Show More
+                                        </button>
+                                    </div>
+                            )}
+                        </>
                 }
             </div>
         </div>
