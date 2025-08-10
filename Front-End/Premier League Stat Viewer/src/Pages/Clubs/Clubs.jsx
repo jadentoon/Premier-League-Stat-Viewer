@@ -48,7 +48,7 @@ function Clubs() {
                                     {filteredClubs.map(club => (
                                         <Link 
                                             key={club.name}
-                                            to={`/data?squad=${encodeURIComponent(club.db_name)}`}
+                                            to={`/data?squad=${encodeURIComponent(club.db_name)}&display=${encodeURIComponent(club.name)}`}
                                         >
                                             <article
                                                 className='bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer'>

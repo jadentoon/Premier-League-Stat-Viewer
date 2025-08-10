@@ -51,7 +51,7 @@ const Nationality = () => {
                                 {filteredNations.map(nation => (
                                     <Link
                                         key={nation.nationCode2}
-                                        to={`/data?nation=${encodeURIComponent(nation.nationCode3)}`}
+                                        to={`/data?nation=${encodeURIComponent(nation.nationCode3)}&display=${encodeURIComponent(nation.nationName)}`}
                                     >
                                         <article
                                             className="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center py-6 px-4 cursor-pointer"

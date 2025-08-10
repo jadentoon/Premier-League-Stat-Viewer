@@ -6,6 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 const PlayerData = () => {
     const [playerData, setPlayerData] = useState([]);
     const [param, setParam] = useState('');
+    const [displayParam, setDisplayParam] = useState('');
     const [error, setError] = useState(null);
     const [visibleCount, setVisibleCount] = useState(10);
 
@@ -23,6 +24,7 @@ const PlayerData = () => {
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
+        setDisplayParam(params.get('display'));
         const paramMap = ['name', 'squad', 'nation', 'pos'];
         for (const key of paramMap) {
             const value = params.get(key);
@@ -47,7 +49,7 @@ const PlayerData = () => {
                     </h1>
                     <p className='text-gray-600 mt-3'>
                         {param ? (
-                            <>Showing stats for: <span className='font-semibold text-purple-700'>"{param}"</span></>
+                            <>Showing stats for: <span className='font-semibold text-purple-700'>"{displayParam}"</span></>
                         ) : (
                             "Loading player data..."
                         )}
@@ -91,7 +93,8 @@ const PlayerData = () => {
                                     <div className='text-center mt-4'>
                                         <button 
                                         onClick={showMore}
-                                        className='bg-gradient-to-r from-purple-500 to-purple-700 shadow-lg hover:scale-105 hover:shadow-2xl text-white py-2 px-4 rounded-full cursor-pointer transition-all duration-300 fade-in delay-1000'>
+                                        className='bg-gradient-to-r from-purple-500 to-purple-700 shadow-lg hover:scale-105 hover:shadow-2xl 
+                                        text-white py-2 px-4 rounded-full cursor-pointer transition-all duration-300 fade-in delay-1000'>
                                             Show More
                                         </button>
                                     </div>

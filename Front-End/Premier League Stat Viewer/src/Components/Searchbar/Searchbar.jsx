@@ -41,7 +41,7 @@ const Searchbar = ({ recommendations, onSearch, location }) => {
     }
 
     const handleSearchClick = search => {
-        navigate(`/data/?${location}=${encodeURIComponent(search)}`);
+        navigate(`/data/?${location}=${encodeURIComponent(search)}&display=${search}`);
     };
 
 
