@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import premier_league_logo from '../../Assets/premier-league-logo.png';
+import premier_league_logo from '../../assets/premier-league-logo.png';
 import Navbar from '../../Components/Navbar/Navbar';
 import "./Home.css";
 
