@@ -18,12 +18,12 @@ function Navbar(){
 
     return(
         <>
-            <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-[50px] bg-purple-300 drop-shadow-xl z-50'>
+            <div className='flex justify-between items-center w-full py-[10px] px-[10%] fixed gap-12 bg-purple-300 drop-shadow-xl z-50'>
                 <ul className='hidden md:flex w-full justify-between'>
                     {navItems.map((item, index) => (
                         <li
                         key={item.label}
-                        className="p-4 cursor-pointer text-md w-20"
+                        className="p-4 cursor-pointer text-md w-20 flex justify-center"
                         onMouseEnter={() => setHover(index)}
                         onMouseLeave={() => setHover(null)}
                         >
@@ -41,15 +41,19 @@ function Navbar(){
             {nav && (
                 <div
                     className="fixed inset-0 bg-black/50 z-40 md:hidden"
+                    onClick = {handleNav}
                 ></div>
             )}
 
-            <div className={nav ? 'fixed left-0 top-0 w-[40%] h-full bg-purple-300 border-r border-r-purple-900 ease-in-out duration-500 z-50 md:hidden' : 'fixed left-[-100%]'}>
-                <ul className='uppercase p-4 opacity-100 z-50'>
-                    {navItems.map((item, index) => (
+            <div className={`fixed left-0 top-0 w-3/4 max-w-xs h-full bg-purple-300 border-r border-r-purple-900 transform transition-transform duration-500 ease-in-out z-50 md:hidden ${
+                nav ? 'translate-x-0' : '-translate-x-full'
+            }`}>
+                <ul className='uppercase p-4 mt-12 space-y-12'>
+                    {navItems.map((item) => (
                         <li
                         key={item.label}
-                        className='p-4 border-b cursor-pointer border-gray-600'>
+                        className='flex items-center gap-3 p-4 border-b border-gray-600 hover:bg-purple-400 cursor-pointer transition-colors duration-300'>
+                            {item.icon}
                             <Link to={item.route}>
                                 {item.label}
                             </Link>
