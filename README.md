@@ -3,6 +3,7 @@
 **Tech Stack** - ReactJS, TailWindCSS, PostgreSQL, Spring Boot, Python (Selenium & Pandas)
 
 **Link** - https://premier-league-stat-viewer-nsgm.vercel.app/
+(Note - Back-end has not be deployed yet).
 
 Premier League Stat Viewer is a Full-stack application designed to scrape match data for over 700 players from FBRef, processes and manipulates with a Spring Boot back end and dynamically display with a React.JS front-end. 
 
