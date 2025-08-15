@@ -10,15 +10,15 @@ const Searchbar = ({ recommendations, onSearch, location }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [playerData, setPlayerData] = useState([]);
     const navigate = useNavigate();
+    const url = import.meta.env.VITE_API_BACKEND_URL;
 
     useEffect(() => {
         if (recommendations) {
-            axios.get(`http://localhost:8081/api/v1/players`).then(
+            axios.get(url).then(
                 response => {
                     const names = response.data
                         .map(p => p?.player)
                         .filter(player => typeof player === 'string');
-                    console.log(names)
                     setPlayerData(names);
                 }
             ).catch(error => {

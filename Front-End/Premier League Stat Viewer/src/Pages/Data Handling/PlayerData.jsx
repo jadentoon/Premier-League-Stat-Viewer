@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react'
 import axios from 'axios'
 import Navbar from '../../Components/Navbar/Navbar';
 
-
 const PlayerData = () => {
     const [playerData, setPlayerData] = useState([]);
     const [param, setParam] = useState('');
@@ -10,13 +9,14 @@ const PlayerData = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [visibleCount, setVisibleCount] = useState(10);
-
+    const url = import.meta.env.VITE_API_BACKEND_URL;
+    
     const fetchData = useCallback(async (queryParam, value) => {
         setParam(value);
         setLoading(true);
         try {
             const response = await axios.get(
-                `http://localhost:8081/api/v1/players?${queryParam}=${encodeURIComponent(value)}`
+                `${url}?${queryParam}=${encodeURIComponent(value)}`
             );
             setPlayerData(response.data);
         } catch (error) {
@@ -26,7 +26,7 @@ const PlayerData = () => {
                 setLoading(false);
             },1000);
         }
-    }, []);
+    }, [url]);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
